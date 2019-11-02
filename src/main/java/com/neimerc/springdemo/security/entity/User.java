@@ -1,4 +1,4 @@
-package com.neimerc.springdemo.entity;
+package com.neimerc.springdemo.security.entity;
 
 import javax.persistence.*;
 import java.util.Collection;
