@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import com.neimerc.springdemo.entity.Customer;
@@ -15,6 +16,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	// need to inject the session factory
 	@Autowired
+	@Qualifier("sessionFactory")
 	private SessionFactory sessionFactory;	
 	
 	@Override

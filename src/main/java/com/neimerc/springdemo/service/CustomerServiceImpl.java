@@ -17,35 +17,35 @@ public class CustomerServiceImpl implements CustomerService {
 	private CustomerDAO customerDAO;	
 	
 	@Override
-	@Transactional
+	@Transactional("TransactionManager")
 	public List<Customer> getCustomers() {
 		
 		return customerDAO.getCustomers();
 	}
 	
 	@Override
-	@Transactional
+	@Transactional("TransactionManager")
 	public void saveCustomer(Customer theCustomer) {
 
 		customerDAO.saveCustomer(theCustomer);
 	}	
 	
 	@Override
-	@Transactional
+	@Transactional("TransactionManager")
 	public Customer getCustomer(int theId) {
 		
 		return customerDAO.getCustomer(theId);
 	}
 	
 	@Override
-	@Transactional
+	@Transactional("TransactionManager")
 	public void deleteCustomer(int theId) {
 		
 		customerDAO.deleteCustomer(theId);
 	}
 	
 	@Override
-	@Transactional
+	@Transactional("TransactionManager")
 	public List<Customer> searchCustomers(String theSearchName) {
 		return customerDAO.searchCustomers(theSearchName);
 	}	
