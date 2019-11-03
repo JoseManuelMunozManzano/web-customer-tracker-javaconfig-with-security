@@ -198,8 +198,7 @@ public class DemoAppConfig implements WebMvcConfigurer {
 		return sessionFactorySecurity;
 	}	
 	
-	@Bean
-	@Qualifier(value="TransactionManager")
+	@Bean(name="TransactionManager")
 	public HibernateTransactionManager transactionManager(@Qualifier("sessionFactory") SessionFactory sessionFactory) {
 		
 		// setup transaction manager based on session factory
